@@ -1,4 +1,4 @@
-# Projeto especial para empresa DB
+# Projeto de Demonstração
 
 # Laravel + AWS Queue + Lambda - Customers & Balance Demo
 

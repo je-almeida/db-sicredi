@@ -16,10 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        
+            // Seed para usuário root@root
+            User::firstOrCreate(
+                [ 'email' => 'root@root' ],
+                [ 'name' => 'Root', 'email' => 'root@root', 'password' => bcrypt('root') ]
+            );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+            // Seed para 10 customers fictícios
+            \App\Models\Customer::factory()->count(10)->create();
     }
 }
